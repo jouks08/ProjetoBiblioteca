@@ -11,8 +11,9 @@ class Livro extends Model
     protected $fillable = [
         'nome',
         'genero',
-        'nacionalidade',
-        'data_nascimento',
+        'numero_paginas',
+        'autor',
+        'edicao',
     ];
 
 
