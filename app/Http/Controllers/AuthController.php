@@ -29,17 +29,17 @@ class AuthController extends Controller
             ]
         );
     
-        $username = $request->input('text_username');
+        $name = $request->input('text_username');
         $password = $request->input('text_password');
 
-        $user = User::where('username',$username)
+        $user = User::where('name',$name)
                     ->whereNull('deleted_at')
                     ->first();
         
         if(!$user){
             return redirect()->back()
                     ->withInput()
-                    ->with('login_error','Username ou password incorretos!');
+                    ->with('login_error','name ou password incorretos!');
         } else {
             if(!password_verify($password,$user->password)){
                 return redirect()->back()
@@ -53,7 +53,7 @@ class AuthController extends Controller
         session([
             'user' => [
                 'id' => $user->id,
-                'username' => $user->username,
+                'username' => $user->name,
             ]
         ]);
 

@@ -13,4 +13,10 @@ class User extends Model
         'email',
         'password',
     ];
+
+
+    public function livros()
+    {
+        return $this->hasMany(Livro::class); 
+    }
 }
