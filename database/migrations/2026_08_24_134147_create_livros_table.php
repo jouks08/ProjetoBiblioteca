@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('titulo');
             $table->string('genero');
             $table->foreignId('autor_id')->costrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->integer('numero_paginas');
-            $table->date('data_lancamento');
+            $table->date('data_publicacao');
             $table->rememberToken();
             $table->timestamps();
         });

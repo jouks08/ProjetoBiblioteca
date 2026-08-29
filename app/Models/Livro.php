@@ -9,11 +9,11 @@ class Livro extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nome',
+        'titulo',
         'genero',
         'numero_paginas',
         'autor',
-        'edicao',
+        'data_publicacao',
     ];
 
 

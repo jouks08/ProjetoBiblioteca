@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Autor;
 use App\Models\Livro;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -15,9 +16,12 @@ class LivroFactory extends Factory
     public function definition(): array
     {
         return [
-            'titulo' => fake()->sentence(3),
-            'ano_publicacao' => fake()->numberBetween(1800, 2024),
-            'autor_id' => Autor::factory(), // Cria automaticamente um autor associado
+            'user_id'=> User::first()->id ?? User::factory(),
+            'titulo' => fake()->sentence(3), 
+            'genero' => fake()->word(),
+            'numero_paginas' => fake()->numberBetween(50, 800),
+            'data_publicacao' => fake()->date(), 
+            'autor_id' => Autor::factory(), 
         ];
     }
 }
