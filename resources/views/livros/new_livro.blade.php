@@ -12,7 +12,7 @@
                     <p class="display-6 mb-0">NOVO LIVRO</p>
                 </div>
                 <div class="col text-end">
-                    <a href="{{ route('livros.index') }}" class="btn btn-outline-danger">
+                    <a href="{{ route('home') }}" class="btn btn-outline-danger">
                         <i class="fa-solid fa-xmark"></i>
                     </a>
                 </div>
@@ -88,7 +88,7 @@
                 
                 <div class="row mt-3">
                     <div class="col text-end">
-                        <a href="{{ route('livros.index') }}" class="btn btn-primary px-5"><i class="fa-solid fa-ban me-2"></i>Cancelar</a>
+                        <a href="{{ route('home') }}" class="btn btn-primary px-5"><i class="fa-solid fa-ban me-2"></i>Cancelar</a>
                         <button type="submit" class="btn btn-secondary px-5"><i class="fa-regular fa-circle-check me-2"></i>Salvar Livro</button>
                     </div>
                 </div>

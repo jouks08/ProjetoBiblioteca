@@ -31,20 +31,17 @@
             <div class="card mb-3 shadow-sm">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <div>
-                        <!-- Título do Livro -->
                         <h5 class="card-title text-primary fw-bold mb-1">
                             {{ $livro->titulo }}
                         </h5>
 
-                        <!-- Demais atributos -->
                         <p class="card-text text-muted mb-0">
                             Autor: <strong>{{ $livro->autor->nome }}</strong> |
                             Publicação: {{ \Carbon\Carbon::parse($livro->data_publicacao)->format('d/m/Y') }} |
-                            Páginas: {{ $livro->paginas }}
+                            Páginas: {{ $livro->numero_paginas }}
                         </p>
                     </div>
 
-                    <!-- Botões de Ação (Editar / Excluir) -->
                     <div>
                         <a href="{{ route('edit.livro', ['id' => \App\Services\Operations::encryptId($livro->id)]) }}" class="btn btn-outline-primary btn-sm me-1">
                             <i class="fa-regular fa-pen-to-square"></i>

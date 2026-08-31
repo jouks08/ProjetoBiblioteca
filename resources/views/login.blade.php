@@ -28,7 +28,6 @@
                                     @enderror
                                 </div>
                                 
-                                <!-- Senha -->
                                 <div class="mb-3">
                                     <label for="text_password" class="form-label">Senha</label>
                                     <div class="input-group">
