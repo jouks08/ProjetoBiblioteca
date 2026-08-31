@@ -9,15 +9,14 @@ class User extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'username',
+        'name',
         'email',
         'password',
     ];
 
 
-    // Dentro da classe User
-    public function notes()
+    public function livros()
     {
-        return $this->hasMany(Note::class);
+        return $this->hasMany(Livro::class); 
     }
 }
